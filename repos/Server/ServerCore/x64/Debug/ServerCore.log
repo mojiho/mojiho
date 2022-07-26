@@ -1,4 +1,8 @@
 ﻿  pch.cpp
 C:\source\repos\Server\ServerCore\pch.h(5,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  CoreGlobal.cpp
   CorePch.cpp
+  CoreTLS.cpp
+  ThreadManager.cpp
+  코드를 생성하고 있습니다...
   ServerCore.vcxproj -> C:\source\repos\Server\Libraries\Debug\ServerCore.lib

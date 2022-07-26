@@ -117,7 +117,7 @@ public:
 				newData.release();
 				break;
 			}
-
+			oldTail.ptr->ReleaseRef();
 		}
 
 		/*shared_ptr<T> newData = make_shared<T>(value);
@@ -161,6 +161,28 @@ private:
 			if(counter.compare_exchange_strong(oldCounter,newCounter))
 			{
 				oldCounter.externalCount = newCounter.externalCount;
+				break;
+			}
+		}
+	}
+
+	static void FreeExternalCount(CountednodePtr& oldnodePtr)
+	{
+		Node* ptr = oldNOdePtr.ptr;
+		const int32 countIncrease = oldnodePtr.externalCount - 2;
+
+		NodeCounter oldCounter = ptr->count.load();
+
+		while (true)
+		{
+			NodeCounter newCounter = oldCounter;
+			newCounter.externalCountRemaining--;
+			newCounter.internalCount += countIncrease;
+
+			if(ptr->count.compare_exchange_strong(oldCounter,newCounter))
+			{
+				if (newCounter.internalCount == 0 && newCounter.externalCountRemaining == 0)
+					//delete;
 				break;
 			}
 		}
