@@ -1,1 +1,7 @@
-﻿  GameServer.vcxproj -> C:\source\repos\Server\Binary\Debug\GameServer.exe
+﻿  pch.cpp
+C:\source\repos\Server\GameServer\pch.h(12,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  AccountManager.cpp
+  GameServer.cpp
+  PlayerManager.cpp
+  코드를 생성하고 있습니다...
+  GameServer.vcxproj -> C:\source\repos\Server\Binary\Debug\GameServer.exe

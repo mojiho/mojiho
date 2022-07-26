@@ -1,10 +1,16 @@
 #include "pch.h"
 #include "AccountManager.h"
-#include "UserManager.h"
+#include "PlayerManager.h"
 
-void AccountManager::ProcessLogin()
+AccountManager GAccountManager;
+
+void AccountManager::AccountThenPlayer()
 {
-	lock_guard<mutex> guard(_mutex);
+	WRITE_LOCK;
+	GPlayerManager.Lock();
+}
 
-	User* user = UserManager::Instance()->GetUser(100);
+void AccountManager::Lock()
+{
+	WRITE_LOCK;
 }

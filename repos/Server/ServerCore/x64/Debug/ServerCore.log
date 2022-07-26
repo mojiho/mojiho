@@ -3,6 +3,11 @@ C:\source\repos\Server\ServerCore\pch.h(5,10): warning C4067: 전처리기 지�
   CoreGlobal.cpp
   CorePch.cpp
   CoreTLS.cpp
+  DeadLockProfiler.cpp
+C:\source\repos\Server\ServerCore\DeadLockProfiler.cpp(55,3): warning C4003: 함수 같은 매크로 호출 'CRASH'에 대해 인수가 부족합니다.
+  Lock.cpp
+C:\source\repos\Server\ServerCore\Lock.cpp(49,45): warning C4554: '&': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\source\repos\Server\ServerCore\Lock.cpp(98,5): warning C4554: '&': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
   ThreadManager.cpp
   코드를 생성하고 있습니다...
   ServerCore.vcxproj -> C:\source\repos\Server\Libraries\Debug\ServerCore.lib
